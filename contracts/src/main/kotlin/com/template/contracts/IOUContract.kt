@@ -22,7 +22,7 @@ class IOUContract : Contract {
 
             val expectedSigners = listOf(output.borrower.owningKey, output.lender.owningKey)
             "There must be two signers." using (command.signers.toSet().size == 2)
-            "The borrower and lender must be signers." using (command.signers.containsAll(expectedSigners)n)
+            "The borrower and lender must be signers." using (command.signers.containsAll(expectedSigners))
         }
     }
 
